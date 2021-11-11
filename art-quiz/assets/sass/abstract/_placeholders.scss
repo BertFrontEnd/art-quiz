@@ -1,0 +1,19 @@
+%transition {
+  transition: all 0.3s ease-out;
+}
+
+%font-heading {
+  font-family: 'Forum', sans-serif;
+}
+
+%font-text {
+  font-family: 'Roboto', sans-serif;
+}
+
+%button-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 3px;
+}

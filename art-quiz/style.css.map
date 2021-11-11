@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AACA;4CAC4C;AGF5C,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,MAAM;CACxB;;AAED,AAAA,IAAI,CAAC;EACH,SAAS,EAAE,MAAM;CAClB;;AHGD,8CAA8C;AAG9C;;6CAE6C",
+    "sources": [
+        "style.scss",
+        "assets/sass/abstract/_placeholders.scss",
+        "assets/sass/abstract/_mixins.scss",
+        "assets/sass/base/_base.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}

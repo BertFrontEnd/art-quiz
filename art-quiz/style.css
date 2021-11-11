@@ -1,0 +1,16 @@
+/* @import './assets/sass/abstract/constants';
+@import './assets/sass/abstract/discard'; */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* @import './assets/sass/layouts/wrapper'; */
+/* @import './assets/sass/components/header';
+@import './assets/sass/components/main';
+@import './assets/sass/components/footer'; */
+/*# sourceMappingURL=style.css.map */
