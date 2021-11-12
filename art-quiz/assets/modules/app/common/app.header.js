@@ -11,9 +11,9 @@ export const appHeader = new AppHeader({
   template: `
     <nav>
       <ul>
-        <li>Home</li>
-        <li>Quiz</li>
-        <li>Settings</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+        <li><a href="#settings">Settings</a></li>
       </ul>
     </nav>
 `,

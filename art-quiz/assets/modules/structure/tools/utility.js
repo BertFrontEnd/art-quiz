@@ -6,6 +6,9 @@ const wfm = {
       }, ms);
     });
   },
+  router() {
+    return window.location.hash.slice(1);
+  },
 };
 
 export { wfm };

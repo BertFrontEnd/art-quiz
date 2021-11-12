@@ -10,7 +10,9 @@ export const appComponent = new AppComponent({
   selector: 'app-root',
   template: `
     <app-header></app-header>
-    <div class="direction">Artist <span class="quiz">Art-Quiz</span></div>
-    <div class="direction">Pictures <span class="quiz">Art-Quiz</span></div>
+    <router-outlet></router-outlet>
+    <div>RS School</div>
+    <div>2021</div>
+    <div>BertFrontEnd</div>
   `,
 });

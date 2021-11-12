@@ -5,6 +5,12 @@
 import { bootstrap, wfm } from './assets/modules/structure/index.js';
 import { appModule } from './assets/modules/app/app.module.js';
 
+window.addEventListener('load', () => {
+  if (window.location.hash === '') {
+    window.location.hash = 'home';
+  }
+});
+
 wfm.delay().then(() => {
   bootstrap(appModule);
 });
