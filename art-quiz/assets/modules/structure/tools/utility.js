@@ -9,6 +9,9 @@ const wfm = {
   router() {
     return window.location.hash.slice(1);
   },
+  isUndefined(element) {
+    return typeof element === 'undefined';
+  },
 };
 
 export { wfm };

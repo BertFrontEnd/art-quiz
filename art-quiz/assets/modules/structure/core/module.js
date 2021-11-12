@@ -26,6 +26,10 @@ export class Module {
     let url = wfm.router();
     let route = this.routes.find((route) => route.path === url);
 
+    if (wfm.isUndefined(route)) {
+      route = this.routes.find((el) => el.path === 'error');
+    }
+
     document.querySelector(
       'router-outlet',
     ).innerHTML = `<${route.component.selector}></${route.component.selector}>`;

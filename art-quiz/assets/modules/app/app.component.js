@@ -11,8 +11,6 @@ export const appComponent = new AppComponent({
   template: `
     <app-header></app-header>
     <router-outlet></router-outlet>
-    <div>RS School</div>
-    <div>2021</div>
-    <div>BertFrontEnd</div>
+    <app-footer></app-footer>
   `,
 });
