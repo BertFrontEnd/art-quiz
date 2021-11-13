@@ -30,11 +30,11 @@ export class Module {
       route = this.routes.find((el) => el.path === 'error');
     }
 
-    let el = route.component.selector;
+    let currentRouteSelector = route.component.selector;
 
     document.querySelector(
       '#app-main-router',
-    ).innerHTML = `<section id="${el.slice(1)}></section>`;
+    ).innerHTML = `<section id="${currentRouteSelector.slice(1)}"></section>`;
 
     this.renderComponent(route.component);
   }

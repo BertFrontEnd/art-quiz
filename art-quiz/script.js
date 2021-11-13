@@ -11,6 +11,6 @@ window.addEventListener('load', () => {
   }
 });
 
-wfm.delay().then(() => {
+wfm.delay(500).then(() => {
   bootstrap(appModule);
 });
