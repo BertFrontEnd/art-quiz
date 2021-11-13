@@ -7,7 +7,7 @@ class AppFooter extends QComponent {
 }
 
 export const appFooter = new AppFooter({
-  selector: 'app-footer',
+  selector: '#app-footer',
   template: `
     <ul>
       <li>BertFrontEnd</li>

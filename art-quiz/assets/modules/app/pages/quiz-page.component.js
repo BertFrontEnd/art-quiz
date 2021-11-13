@@ -7,7 +7,7 @@ class QuizPageComponent extends QComponent {
 }
 
 export const quizPageComponent = new QuizPageComponent({
-  selector: 'app-quiz-page',
+  selector: '#app-quiz-page',
   template: `
   <h1>Quiz Page</h1>
   <div class="direction">Artist <span class="quiz">Art-Quiz</span></div>

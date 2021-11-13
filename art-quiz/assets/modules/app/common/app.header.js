@@ -7,7 +7,7 @@ class AppHeader extends QComponent {
 }
 
 export const appHeader = new AppHeader({
-  selector: 'app-header',
+  selector: '#app-header',
   template: `
     <nav>
       <ul>

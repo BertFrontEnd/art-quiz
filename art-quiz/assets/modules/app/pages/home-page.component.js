@@ -7,6 +7,6 @@ class HomePageComponent extends QComponent {
 }
 
 export const homePageComponent = new HomePageComponent({
-  selector: 'app-home-page',
+  selector: '#app-home-page',
   template: `<h1>Home Page</h1>`,
 });

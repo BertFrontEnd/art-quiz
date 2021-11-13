@@ -7,10 +7,10 @@ class AppComponent extends QComponent {
 }
 
 export const appComponent = new AppComponent({
-  selector: 'app-root',
+  selector: '#app-root',
   template: `
-    <app-header></app-header>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <header id="app-header" class="app-header"></header>
+    <main id="app-main-router" class="app-main-router"></main>
+    <footer id="app-footer" class="app-footer"></footer>
   `,
 });

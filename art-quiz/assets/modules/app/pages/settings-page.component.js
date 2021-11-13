@@ -7,6 +7,6 @@ class SettingsPageComponent extends QComponent {
 }
 
 export const settingsPageComponent = new SettingsPageComponent({
-  selector: 'app-settings-page',
+  selector: '#app-settings-page',
   template: `<h1>Settings Page</h1>`,
 });
