@@ -1,0 +1,32 @@
+#app-quiz-page {
+  @include alignment(center, center, row, wrap);
+  row-gap: 20px;
+  column-gap: 40px;
+  width: 100%;
+
+  .artist-quiz,
+  .picture-quiz {
+    @include alignment(center, center, column, nowrap);
+    row-gap: 10px;
+
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .direction-quiz {
+      font-size: 3rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: $main-text-color;
+      font-weight: 600;
+
+      .text-quiz {
+        font-family: 'Forum', serif;
+        font-weight: 900;
+      }
+    }
+  }
+}

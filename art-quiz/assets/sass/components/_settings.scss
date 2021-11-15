@@ -1,0 +1,32 @@
+#app-settings-page {
+  @include alignment(center, center, row, wrap);
+  row-gap: 20px;
+  column-gap: 40px;
+  width: 100%;
+
+  .volume-quiz,
+  .time-quiz {
+    @include alignment(center, center, column, nowrap);
+    row-gap: 30px;
+    width: 250px;
+    height: 250px;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+
+    .icon-settings-quiz {
+      width: 80px;
+      height: 80px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    .icon-volume-quiz {
+      background-image: url('./assets/img/volume.svg');
+    }
+
+    .icon-time-quiz {
+      background-image: url('./assets/img/timer.svg');
+    }
+  }
+}

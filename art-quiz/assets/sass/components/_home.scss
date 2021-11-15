@@ -1,4 +1,4 @@
-.main {
+#app-home-page {
   @include alignment(center, center, column, nowrap);
 
   .home-quiz {
@@ -11,20 +11,10 @@
     }
 
     .description-quiz {
-      max-width: 245px;
+      max-width: 250px;
       text-align: center;
       color: $main-text-color;
+      font-weight: 300;
     }
   }
 }
-
-/* .direction {
-  font-size: 2.6rem;
-}
-
-.quiz {
-  font-family: 'Forum', serif;
-  font-size: 2.8rem;
-  font-weight: 900;
-}
- */
