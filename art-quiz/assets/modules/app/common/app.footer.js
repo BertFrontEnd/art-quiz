@@ -9,10 +9,12 @@ class AppFooter extends QComponent {
 export const appFooter = new AppFooter({
   selector: '#app-footer',
   template: `
-    <ul>
-      <li>BertFrontEnd</li>
-      <li>2021</li>
-      <li>RS School</li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="https://github.com/BertFrontEnd/" target="_blank" class="author">BertFrontEnd</a></li>
+        <li><a href="https://www.youtube.com/watch?v=YF2vrolwcR4" target="_blank" class="year">2021</a></li>
+        <li><a href="https://rs.school/js/" target="_blank" class="rsschool">RSSchool</a></li>
+      </ul>
+    </nav>
 `,
 });

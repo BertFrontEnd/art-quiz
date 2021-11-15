@@ -7,6 +7,6 @@ class ErrorPageComponent extends QComponent {
 }
 
 export const errorPageComponent = new ErrorPageComponent({
-  selector: 'app-error-page',
+  selector: '#app-error-page',
   template: `<h1>404: page is no found</h1>`,
 });

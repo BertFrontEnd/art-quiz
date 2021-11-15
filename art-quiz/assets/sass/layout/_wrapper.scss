@@ -1,0 +1,5 @@
+.wrapper {
+  @include alignment(space-between, space-between, column, nowrap);
+  height: 100vh;
+  width: 100%;
+}

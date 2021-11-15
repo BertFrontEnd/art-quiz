@@ -1,0 +1,64 @@
+.footer {
+  nav {
+    ul {
+      @include alignment(center, center, row, nowrap);
+      width: 100%;
+      height: 64px;
+      background-color: $link-background-color;
+
+      li {
+        @include alignment(flex-end, center, column, nowrap);
+        height: 100%;
+        width: 100px;
+
+        a {
+          position: relative;
+          @include alignment(flex-end, center, column, nowrap);
+          width: 100%;
+          height: 100%;
+          padding: 5px;
+          font-size: 1.4rem;
+          color: $inactive-link-text-color;
+          text-decoration: none;
+          @extend %transition;
+
+          &:hover {
+            background-color: $hover-link-background-color;
+            color: $hover-link-text-color;
+          }
+
+          &::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            font-size: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            transform: translateX(-50%);
+          }
+        }
+
+        .author {
+          &::before {
+            content: '\f09b';
+            font-family: 'fontAwesome';
+          }
+        }
+
+        .year {
+          &::before {
+            content: '\f085';
+            font-family: 'fontAwesome';
+          }
+        }
+
+        .rsschool {
+          &::before {
+            content: '\f19d';
+            font-family: 'fontAwesome';
+          }
+        }
+      }
+    }
+  }
+}

@@ -9,8 +9,8 @@ class AppComponent extends QComponent {
 export const appComponent = new AppComponent({
   selector: '#app-root',
   template: `
-    <header id="app-header" class="app-header"></header>
-    <main id="app-main-router" class="app-main-router"></main>
-    <footer id="app-footer" class="app-footer"></footer>
+    <header id="app-header" class="header"></header>
+    <main id="app-main-router" class="main"></main>
+    <footer id="app-footer" class="footer"></footer>
   `,
 });
