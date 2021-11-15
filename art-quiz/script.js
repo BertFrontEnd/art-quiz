@@ -4,6 +4,7 @@
 
 import { bootstrap, wfm } from './assets/modules/structure/index.js';
 import { appModule } from './assets/modules/app/app.module.js';
+import { setActiveLink } from './assets/modules/structure/tools/link.js';
 
 window.addEventListener('load', () => {
   if (window.location.hash === '') {
@@ -11,6 +12,9 @@ window.addEventListener('load', () => {
   }
 });
 
-wfm.delay(50).then(() => {
-  bootstrap(appModule);
-});
+wfm
+  .delay(50)
+  .then(() => {
+    bootstrap(appModule);
+  })
+  .then(setActiveLink);
