@@ -1,4 +1,6 @@
 .header {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.24);
+
   nav {
     ul {
       @include alignment(center, center, row, nowrap);
@@ -26,6 +28,10 @@
           &:hover {
             background-color: $hover-link-background-color;
             color: $hover-link-text-color;
+
+            &::before {
+              animation: link-animate 0.6s;
+            }
           }
 
           &::before {

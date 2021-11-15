@@ -1,0 +1,11 @@
+@keyframes link-animate {
+  0% {
+    transform: translateX(-50%) scale(0.5);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
