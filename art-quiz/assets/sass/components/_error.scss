@@ -1,0 +1,12 @@
+#app-error-page {
+  @include alignment(center, center, column, nowrap);
+  width: 100%;
+
+  .error-quiz {
+    padding: 10px;
+    font-size: 3rem;
+    color: $error-text-color;
+    text-transform: uppercase;
+    background-color: $error-background-color;
+  }
+}

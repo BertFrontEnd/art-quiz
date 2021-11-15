@@ -61,6 +61,7 @@
         .active-link {
           background-color: $active-link-background-color;
           color: $active-link-text-color;
+          @extend %transition;
         }
       }
     }

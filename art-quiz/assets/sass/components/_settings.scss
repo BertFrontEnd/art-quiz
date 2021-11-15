@@ -10,23 +10,74 @@
     row-gap: 30px;
     width: 250px;
     height: 250px;
-    border: 1px solid $border-color;
+    background-color: $settings-background-color;
+    /* border: 1px solid $border-color; */
     border-radius: 5px;
 
     .icon-settings-quiz {
-      width: 80px;
-      height: 80px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      width: 70px;
+      height: 70px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: $settings-icon-background-color;
     }
 
     .icon-volume-quiz {
-      background-image: url('./assets/img/volume.svg');
+      mask-image: url('./assets/img/volume.svg');
     }
 
     .icon-time-quiz {
-      background-image: url('./assets/img/timer.svg');
+      mask-image: url('./assets/img/timer.svg');
     }
+  }
+
+  .input-settings-quiz {
+    @include alignment(center, center, row, wrap);
+    column-gap: 20px;
+
+    .checkbox-quiz {
+      display: none;
+      appearance: none;
+
+      &:checked {
+        ~ .label-volume-quiz,
+        ~ .label-timer-quiz {
+          &:before {
+            background-color: $settings-check-background-color;
+          }
+        }
+      }
+    }
+
+    .label-volume-quiz,
+    .label-timer-quiz {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      background: $settings-checkbox-background-color;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        height: 70%;
+        content: '';
+        border-radius: 1px;
+        transform: translate(-50%, -50%);
+        @extend %transition;
+      }
+    }
+  }
+
+  .volume-value-quiz,
+  .timer-value-quiz {
+    font-size: 3rem;
+    color: $settings-text-background-color;
+    user-select: none;
   }
 }
