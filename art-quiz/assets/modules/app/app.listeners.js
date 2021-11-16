@@ -2,8 +2,23 @@ import { wfm } from './../structure/tools/utility.js';
 
 const getHash = () => {
   window.addEventListener('load', () => {
-    if (window.location.hash === '') {
-      window.location.hash = 'home';
+    const hash = window.location.hash;
+
+    if (hash === '') {
+      hash = 'home';
+    }
+
+    return hash;
+  });
+};
+
+const saveActiveLink = () => {
+  const links = document.querySelectorAll('.link');
+  console.log(links);
+
+  links.forEach((link) => {
+    if (link.classList.contains(window.location.hash.slice(1))) {
+      link.classList.add('active-link');
     }
   });
 };
@@ -37,4 +52,4 @@ const offsetRange = () => {
   });
 };
 
-export { getHash, toggleDisableRange, offsetRange };
+export { getHash, saveActiveLink, toggleDisableRange, offsetRange };
