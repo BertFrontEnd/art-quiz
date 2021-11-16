@@ -42,6 +42,12 @@
       &:checked {
         ~ .label-volume-quiz,
         ~ .label-timer-quiz {
+          &:hover {
+            &::before {
+              background-color: $settings-hover-check-background-color;
+            }
+          }
+
           &:before {
             background-color: $settings-check-background-color;
           }

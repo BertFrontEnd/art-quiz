@@ -1,5 +1,5 @@
 import { wfm } from '../tools/utility.js';
-import { toggleDisableRange } from '../../app/app.listeners.js';
+import { toggleDisableRange, offsetRange } from '../../app/app.listeners.js';
 
 export class Module {
   constructor(config) {
@@ -40,6 +40,7 @@ export class Module {
     this.renderComponent(route.component);
 
     toggleDisableRange();
+    offsetRange();
   }
 
   renderComponent(component) {

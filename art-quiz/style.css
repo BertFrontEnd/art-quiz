@@ -404,7 +404,6 @@ body {
   width: 250px;
   height: 250px;
   background-color: #f8b585;
-  /* border: 1px solid $border-color; */
   border-radius: 5px;
 }
 
@@ -458,6 +457,11 @@ body {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+
+#app-settings-page .input-settings-quiz .checkbox-quiz:checked ~ .label-volume-quiz:hover::before,
+#app-settings-page .input-settings-quiz .checkbox-quiz:checked ~ .label-timer-quiz:hover::before {
+  background-color: #0075ffcc;
 }
 
 #app-settings-page .input-settings-quiz .checkbox-quiz:checked ~ .label-volume-quiz:before,
@@ -626,7 +630,7 @@ body {
 
 #app-error-page .error-quiz {
   padding: 10px;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #f8b585;
