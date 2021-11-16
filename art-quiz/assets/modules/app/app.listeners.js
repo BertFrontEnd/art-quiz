@@ -21,12 +21,15 @@ const saveActiveLink = () => {
 
 const toggleDisableRange = () => {
   const labelsQuiz = document.querySelectorAll('.label-quiz');
+  const volumeRangeQuiz = document.querySelector('.volume-range-quiz');
+  const timerRangeQuiz = document.querySelector('.timer-range-quiz');
 
   labelsQuiz.forEach((label) => {
     label.addEventListener('click', (e) => {
-      wfm.setDisable(
-        label.previousSibling.previousSibling.previousSibling.previousSibling,
-      );
+      if (label.classList.contains('label-volume-quiz'))
+        wfm.setDisable(volumeRangeQuiz);
+      if (label.classList.contains('label-timer-quiz'))
+        wfm.setDisable(timerRangeQuiz);
     });
   });
 };

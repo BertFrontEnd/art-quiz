@@ -8,7 +8,7 @@ import { appModule } from './assets/modules/app/app.module.js';
 import { setActiveLink } from './assets/modules/structure/tools/link.js';
 
 wfm
-  .delay(1000)
+  .delay(10)
   .then(() => {
     bootstrap(appModule);
   })

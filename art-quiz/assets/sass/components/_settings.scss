@@ -6,10 +6,11 @@
 
   .volume-quiz,
   .time-quiz {
-    @include alignment(center, center, column, nowrap);
-    row-gap: 30px;
+    @include alignment(center, center, row, wrap);
+    column-gap: 30px;
     width: 250px;
     height: 250px;
+    padding: 35px;
     background-color: $settings-background-color;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
@@ -32,26 +33,36 @@
     }
   }
 
+  .volume-value-quiz,
+  .timer-value-quiz {
+    width: 60px;
+    font-size: 3rem;
+    text-align: center;
+    color: $settings-text-background-color;
+    user-select: none;
+  }
+
   .input-settings-quiz {
     @include alignment(center, center, row, wrap);
     column-gap: 20px;
+
+    /*     .range-setting-quiz {
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.24);
+    } */
 
     .checkbox-quiz {
       display: none;
       appearance: none;
 
       &:checked {
-        ~ .label-volume-quiz,
-        ~ .label-timer-quiz {
-          &:hover {
-            &::before {
-              background-color: $settings-hover-check-background-color;
-            }
-          }
-
+        ~ .label-quiz {
           &:before {
             background-color: $settings-check-background-color;
           }
+        }
+
+        ~ .range-setting-quiz::-webkit-slider-thumb {
+          background-color: $settings-thumb-background-color;
         }
       }
     }
@@ -66,12 +77,6 @@
       background: $settings-checkbox-background-color;
       cursor: pointer;
 
-      &:hover {
-        &::before {
-          background-color: $settings-hover-check-background-color;
-        }
-      }
-
       &:before {
         position: absolute;
         top: 50%;
@@ -84,12 +89,5 @@
         @extend %transition;
       }
     }
-  }
-
-  .volume-value-quiz,
-  .timer-value-quiz {
-    font-size: 3rem;
-    color: $settings-text-background-color;
-    user-select: none;
   }
 }
