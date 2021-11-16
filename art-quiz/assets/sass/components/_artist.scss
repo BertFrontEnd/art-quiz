@@ -1,0 +1,11 @@
+#app-artist-page {
+  @include alignment(center, center, row, wrap);
+  width: 1200px;
+
+  .artist-container-quiz {
+    @include alignment(center, center, row, wrap);
+    width: 100px;
+    height: 100px;
+    background-color: red;
+  }
+}
