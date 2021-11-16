@@ -1,4 +1,5 @@
 import { wfm } from '../tools/utility.js';
+import { toggleDisableRange } from '../../app/app.listeners.js';
 
 export class Module {
   constructor(config) {
@@ -37,6 +38,8 @@ export class Module {
     ).innerHTML = `<section id="${currentRouteSelector.slice(1)}"></section>`;
 
     this.renderComponent(route.component);
+
+    toggleDisableRange();
   }
 
   renderComponent(component) {

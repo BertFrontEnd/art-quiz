@@ -12,6 +12,13 @@ const wfm = {
   isUndefined(element) {
     return typeof element === 'undefined';
   },
+  setDisable(element) {
+    if (element.getAttribute('disabled')) {
+      element.removeAttribute('disabled');
+    } else {
+      element.setAttribute('disabled', 'disabled');
+    }
+  },
 };
 
 export { wfm };

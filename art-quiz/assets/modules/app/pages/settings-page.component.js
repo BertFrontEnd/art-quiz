@@ -14,7 +14,7 @@ export const settingsPageComponent = new SettingsPageComponent({
       <div class="input-settings-quiz">
         <input type="range" min="0" max="100" value="50" class="volume-range-quiz" />
         <input type="checkbox" id="volume" class="checkbox-quiz checkbox-volume-quiz" checked />
-        <label for="volume" class="label-volume-quiz"></label>
+        <label for="volume" class="label-quiz label-volume-quiz"></label>
       </div>
       <output class="volume-value-quiz">50</output>
     </div >
@@ -23,7 +23,7 @@ export const settingsPageComponent = new SettingsPageComponent({
       <div class="input-settings-quiz">
         <input type="range" min="10" max="20" value="15" step="5" class="time-range-quiz" />
         <input type="checkbox" id="timer" class="checkbox-quiz checkbox-time-quiz" checked />
-        <label for="timer" class="label-timer-quiz"></label>
+        <label for="timer" class="label-quiz label-timer-quiz"></label>
       </div>
       <output class="timer-value-quiz">15</output>
     </div>
