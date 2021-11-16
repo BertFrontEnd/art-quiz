@@ -3,18 +3,14 @@ import { wfm } from './../structure/tools/utility.js';
 const getHash = () => {
   window.addEventListener('load', () => {
     const hash = window.location.hash;
-
     if (hash === '') {
       hash = 'home';
     }
-
-    return hash;
   });
 };
 
 const saveActiveLink = () => {
   const links = document.querySelectorAll('.link');
-  console.log(links);
 
   links.forEach((link) => {
     if (link.classList.contains(window.location.hash.slice(1))) {
