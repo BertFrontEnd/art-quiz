@@ -10,13 +10,13 @@ export const quizPageComponent = new QuizPageComponent({
   selector: '#app-quiz-page',
   template: `
     <figure class="artist-quiz">
-      <a href="#">
+      <a href="#" class="artist-link-quiz">
         <img src="./assets/img/artist-quiz.jpg" alt="" />
       </a>
       <figcaption class="direction-quiz">Artist <span class="text-quiz">Quiz</span></figcaption>
     </figure>
     <figure class="picture-quiz">
-      <a href="#">
+      <a href="#" class="picture-link-quiz">
         <img src="./assets/img/picture-quiz.jpg" alt="" />
       </a>
       <figcaption class="direction-quiz">Picture <span class="text-quiz">Quiz</span></figcaption>

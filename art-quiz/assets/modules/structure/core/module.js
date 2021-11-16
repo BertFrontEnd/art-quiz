@@ -1,5 +1,6 @@
 import { wfm } from '../tools/utility.js';
 import { toggleDisableRange, offsetRange } from '../../app/app.listeners.js';
+import { removeActiveLink } from './../tools/link.js';
 
 export class Module {
   constructor(config) {
@@ -39,6 +40,7 @@ export class Module {
 
     this.renderComponent(route.component);
 
+    removeActiveLink(route);
     toggleDisableRange();
     offsetRange();
   }

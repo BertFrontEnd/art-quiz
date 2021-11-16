@@ -10,4 +10,13 @@ const setActiveLink = () => {
   });
 };
 
-export { setActiveLink };
+const removeActiveLink = (currentRoute) => {
+  if (currentRoute.path === 'error') {
+    const items = document.querySelectorAll('.link');
+    items.forEach((item) => {
+      item.classList.remove('active-link');
+    });
+  }
+};
+
+export { removeActiveLink, setActiveLink };
