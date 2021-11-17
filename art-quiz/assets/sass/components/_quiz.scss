@@ -1,30 +1,43 @@
 #app-quiz-page {
   @include alignment(center, center, row, wrap);
-  row-gap: 40px;
+  row-gap: 20px;
   column-gap: 40px;
   width: 100%;
 
   .artist-quiz,
   .picture-quiz {
     @include alignment(center, center, column, nowrap);
-    row-gap: 20px;
+    row-gap: 10px;
 
     .artist-link-quiz,
     .picture-link-quiz {
+      width: 250px;
+      height: 250px;
+      opacity: 0.7;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: $container-shadow;
+      background-color: $container-background-color;
       transform: scale(1);
-      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
       @extend %transition;
 
       &:hover {
+        opacity: 1;
+        box-shadow: $container-hover-shadow;
         transform: scale(1.05);
-        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+
+        .category-image-quiz {
+          transform: scale(0.95);
+        }
       }
 
-      img {
-        width: 250px;
-        height: 250px;
+      .category-image-quiz {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 5px;
+        transform: scale(1.2);
+        @extend %transition;
       }
     }
 

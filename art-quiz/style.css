@@ -1,7 +1,12 @@
 input[type='range']::-webkit-slider-thumb, .header nav ul li a, .header nav ul li .active-link, #app-quiz-page .artist-quiz .artist-link-quiz,
 #app-quiz-page .artist-quiz .picture-link-quiz,
 #app-quiz-page .picture-quiz .artist-link-quiz,
-#app-quiz-page .picture-quiz .picture-link-quiz, #app-settings-page .input-settings-quiz .label-volume-quiz:before,
+#app-quiz-page .picture-quiz .picture-link-quiz, #app-quiz-page .artist-quiz .artist-link-quiz .category-image-quiz,
+#app-quiz-page .artist-quiz .picture-link-quiz .category-image-quiz,
+#app-quiz-page .picture-quiz .artist-link-quiz .category-image-quiz,
+#app-quiz-page .picture-quiz .picture-link-quiz .category-image-quiz, #app-artist-page .artist-container-quiz .artist-link-quiz, #app-artist-page .artist-container-quiz .artist-link-quiz .artist-image-quiz, #app-artist-page .artist-container-quiz .artist-description-quiz .artist-category-quiz,
+#app-artist-page .artist-container-quiz .artist-description-quiz .artist-score-quiz, #app-picture-page .picture-container-quiz .picture-link-quiz, #app-picture-page .picture-container-quiz .picture-link-quiz .picture-image-quiz, #app-picture-page .picture-container-quiz .picture-description-quiz .picture-category-quiz,
+#app-picture-page .picture-container-quiz .picture-description-quiz .picture-score-quiz, #app-settings-page .input-settings-quiz .label-volume-quiz:before,
 #app-settings-page .input-settings-quiz .label-timer-quiz:before, .footer nav ul li a {
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -354,7 +359,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  row-gap: 40px;
+  row-gap: 20px;
   -webkit-column-gap: 40px;
           column-gap: 40px;
   width: 100%;
@@ -377,38 +382,55 @@ input[type='range']:focus::-webkit-slider-runnable-track {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  row-gap: 20px;
+  row-gap: 10px;
 }
 
 #app-quiz-page .artist-quiz .artist-link-quiz,
 #app-quiz-page .artist-quiz .picture-link-quiz,
 #app-quiz-page .picture-quiz .artist-link-quiz,
 #app-quiz-page .picture-quiz .picture-link-quiz {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  width: 250px;
+  height: 250px;
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 #app-quiz-page .artist-quiz .artist-link-quiz:hover,
 #app-quiz-page .artist-quiz .picture-link-quiz:hover,
 #app-quiz-page .picture-quiz .artist-link-quiz:hover,
 #app-quiz-page .picture-quiz .picture-link-quiz:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  opacity: 1;
   -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-#app-quiz-page .artist-quiz .artist-link-quiz img,
-#app-quiz-page .artist-quiz .picture-link-quiz img,
-#app-quiz-page .picture-quiz .artist-link-quiz img,
-#app-quiz-page .picture-quiz .picture-link-quiz img {
-  width: 250px;
-  height: 250px;
+#app-quiz-page .artist-quiz .artist-link-quiz:hover .category-image-quiz,
+#app-quiz-page .artist-quiz .picture-link-quiz:hover .category-image-quiz,
+#app-quiz-page .picture-quiz .artist-link-quiz:hover .category-image-quiz,
+#app-quiz-page .picture-quiz .picture-link-quiz:hover .category-image-quiz {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#app-quiz-page .artist-quiz .artist-link-quiz .category-image-quiz,
+#app-quiz-page .artist-quiz .picture-link-quiz .category-image-quiz,
+#app-quiz-page .picture-quiz .artist-link-quiz .category-image-quiz,
+#app-quiz-page .picture-quiz .picture-link-quiz .category-image-quiz {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 #app-quiz-page .artist-quiz .direction-quiz,
@@ -424,6 +446,266 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 #app-quiz-page .picture-quiz .direction-quiz .text-quiz {
   font-family: 'Forum', serif;
   font-weight: 900;
+}
+
+#app-artist-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  width: 100%;
+  max-width: 860px;
+  margin: 50px auto;
+}
+
+#app-artist-page .artist-container-quiz {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz {
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz:hover .artist-image-quiz {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz:hover ~ .artist-description-quiz .artist-category-quiz {
+  -webkit-transform: translate(40px, 15px) scale(1.2);
+          transform: translate(40px, 15px) scale(1.2);
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz:hover ~ .artist-description-quiz .artist-score-quiz {
+  -webkit-transform: translate(-40px, -15px) scale(1.2);
+          transform: translate(-40px, -15px) scale(1.2);
+}
+
+#app-artist-page .artist-container-quiz .artist-link-quiz .artist-image-quiz {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#app-artist-page .artist-container-quiz .artist-description-quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+#app-artist-page .artist-container-quiz .artist-description-quiz .artist-category-quiz,
+#app-artist-page .artist-container-quiz .artist-description-quiz .artist-score-quiz {
+  width: 100%;
+}
+
+#app-artist-page .artist-container-quiz .artist-description-quiz .artist-category-quiz {
+  text-align: left;
+  -webkit-transform: translate(10px, 5px);
+          transform: translate(10px, 5px);
+}
+
+#app-artist-page .artist-container-quiz .artist-description-quiz .artist-score-quiz {
+  text-align: right;
+  -webkit-transform: translate(-10px, -5px);
+          transform: translate(-10px, -5px);
+}
+
+#app-picture-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 20px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  width: 100%;
+  max-width: 860px;
+  margin: 50px auto;
+}
+
+#app-picture-page .picture-container-quiz {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz {
+  opacity: 0.7;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+  background-color: #ffffff;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz:hover {
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+          box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.24);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz:hover .picture-image-quiz {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz:hover ~ .picture-description-quiz .picture-category-quiz {
+  -webkit-transform: translate(40px, 15px) scale(1.2);
+          transform: translate(40px, 15px) scale(1.2);
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz:hover ~ .picture-description-quiz .picture-score-quiz {
+  -webkit-transform: translate(-40px, -15px) scale(1.2);
+          transform: translate(-40px, -15px) scale(1.2);
+}
+
+#app-picture-page .picture-container-quiz .picture-link-quiz .picture-image-quiz {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#app-picture-page .picture-container-quiz .picture-description-quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  color: #ffffff;
+  pointer-events: none;
+}
+
+#app-picture-page .picture-container-quiz .picture-description-quiz .picture-category-quiz,
+#app-picture-page .picture-container-quiz .picture-description-quiz .picture-score-quiz {
+  width: 100%;
+}
+
+#app-picture-page .picture-container-quiz .picture-description-quiz .picture-category-quiz {
+  text-align: left;
+  -webkit-transform: translate(10px, 5px);
+          transform: translate(10px, 5px);
+}
+
+#app-picture-page .picture-container-quiz .picture-description-quiz .picture-score-quiz {
+  text-align: right;
+  -webkit-transform: translate(-10px, -5px);
+          transform: translate(-10px, -5px);
 }
 
 #app-settings-page {

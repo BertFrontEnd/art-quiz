@@ -1,4 +1,4 @@
-#app-artist-page {
+#app-picture-page {
   @include alignment(center, center, row, wrap);
   row-gap: 20px;
   column-gap: 20px;
@@ -6,13 +6,13 @@
   max-width: 860px;
   margin: 50px auto;
 
-  .artist-container-quiz {
+  .picture-container-quiz {
     position: relative;
     @include alignment(center, center, row, wrap);
     width: 200px;
     height: 200px;
 
-    .artist-link-quiz {
+    .picture-link-quiz {
       opacity: 0.7;
       overflow: hidden;
       border-radius: 5px;
@@ -26,22 +26,22 @@
         box-shadow: $container-hover-shadow;
         transform: scale(1.05);
 
-        .artist-image-quiz {
+        .picture-image-quiz {
           transform: scale(0.95);
         }
 
-        ~ .artist-description-quiz {
-          .artist-category-quiz {
+        ~ .picture-description-quiz {
+          .picture-category-quiz {
             transform: translate(40px, 15px) scale(1.2);
           }
 
-          .artist-score-quiz {
+          .picture-score-quiz {
             transform: translate(-40px, -15px) scale(1.2);
           }
         }
       }
 
-      .artist-image-quiz {
+      .picture-image-quiz {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -51,7 +51,7 @@
       }
     }
 
-    .artist-description-quiz {
+    .picture-description-quiz {
       @include alignment(space-between, center, column, nowrap);
       position: absolute;
       width: 100%;
@@ -60,18 +60,18 @@
       color: $category-text-color;
       pointer-events: none;
 
-      .artist-category-quiz,
-      .artist-score-quiz {
+      .picture-category-quiz,
+      .picture-score-quiz {
         width: 100%;
         @extend %transition;
       }
 
-      .artist-category-quiz {
+      .picture-category-quiz {
         text-align: left;
         transform: translate(10px, 5px);
       }
 
-      .artist-score-quiz {
+      .picture-score-quiz {
         text-align: right;
         transform: translate(-10px, -5px);
       }
