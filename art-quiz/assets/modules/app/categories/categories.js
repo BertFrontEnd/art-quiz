@@ -2,6 +2,7 @@ export class Categories {
   constructor(container, config, increment) {
     this.container = container;
     this.figureElementClass = config.figureElementClass;
+    this.directionDataset = config.directionDataset;
     this.aElementClass = config.aElementClass;
     this.imgElementClass = config.imgElementClass;
     this.figcaptionElementClass = config.figcaptionElementClass;
@@ -17,6 +18,7 @@ export class Categories {
 
     const figureElement = document.createElement('figure');
     figureElement.classList.add(this.figureElementClass);
+    figureElement.dataset.direction = `${this.directionDataset}-${categoryNumber}`;
 
     const aElement = document.createElement('a');
     aElement.classList.add(this.aElementClass);

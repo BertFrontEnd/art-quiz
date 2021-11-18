@@ -4,6 +4,7 @@ const renderPictureCategories = () => {
   const categoriesContainer = document.querySelector('#app-picture-page');
   const configCategory = {
     figureElementClass: 'picture-container-quiz',
+    directionDataset: 'picture',
     aElementClass: 'picture-link-quiz',
     imgElementClass: 'picture-image-quiz',
     figcaptionElementClass: 'picture-description-quiz',

@@ -4,6 +4,7 @@ const renderArtistCategories = () => {
   const categoriesContainer = document.querySelector('#app-artist-page');
   const configCategory = {
     figureElementClass: 'artist-container-quiz',
+    directionDataset: 'artist',
     aElementClass: 'artist-link-quiz',
     imgElementClass: 'artist-image-quiz',
     figcaptionElementClass: 'artist-description-quiz',
