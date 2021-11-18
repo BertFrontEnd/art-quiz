@@ -14,30 +14,24 @@
     animation: load-router $load-router-time $load-router-animate;
 
     .picture-link-quiz {
-      opacity: 0.7;
       overflow: hidden;
       border-radius: 5px;
       box-shadow: $container-shadow;
       background-color: $container-background-color;
-      transform: scale(1);
       @extend %transition;
 
       &:hover {
-        opacity: 1;
-        box-shadow: $container-hover-shadow;
-        transform: scale(1.05);
-
         .picture-image-quiz {
-          transform: scale(0.95);
+          transform: scale(1);
         }
 
         ~ .picture-description-quiz {
           .picture-category-quiz {
-            transform: translate(40px, 15px) scale(1.2);
+            transform: translate(15px, 15px) scale(1.2);
           }
 
           .picture-score-quiz {
-            transform: translate(-40px, -15px) scale(1.2);
+            transform: translate(-15px, -15px) scale(1.2);
           }
         }
       }
@@ -55,26 +49,28 @@
     .picture-description-quiz {
       @include alignment(space-between, center, column, nowrap);
       position: absolute;
-      width: 100%;
-      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       font-size: 2rem;
       color: $category-text-color;
       pointer-events: none;
 
       .picture-category-quiz,
       .picture-score-quiz {
-        width: 100%;
+        position: absolute;
         @extend %transition;
       }
 
       .picture-category-quiz {
-        text-align: left;
-        transform: translate(10px, 5px);
+        top: 0;
+        left: 5px;
       }
 
       .picture-score-quiz {
-        text-align: right;
-        transform: translate(-10px, -5px);
+        bottom: 0;
+        right: 5px;
       }
     }
   }

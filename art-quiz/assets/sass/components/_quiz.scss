@@ -14,21 +14,15 @@
     .picture-link-quiz {
       width: 250px;
       height: 250px;
-      opacity: 0.7;
       overflow: hidden;
       border-radius: 5px;
       box-shadow: $container-shadow;
       background-color: $container-background-color;
-      transform: scale(1);
       @extend %transition;
 
       &:hover {
-        opacity: 1;
-        box-shadow: $container-hover-shadow;
-        transform: scale(1.05);
-
         .category-image-quiz {
-          transform: scale(0.95);
+          transform: scale(1);
         }
       }
 
