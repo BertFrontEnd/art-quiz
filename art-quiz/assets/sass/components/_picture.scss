@@ -11,6 +11,7 @@
     @include alignment(center, center, row, wrap);
     width: 200px;
     height: 200px;
+    animation: load-router $load-router-time $load-router-animate;
 
     .picture-link-quiz {
       opacity: 0.7;

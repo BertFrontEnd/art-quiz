@@ -8,6 +8,7 @@
   .picture-quiz {
     @include alignment(center, center, column, nowrap);
     row-gap: 10px;
+    animation: load-router $load-router-time $load-router-animate;
 
     .artist-link-quiz,
     .picture-link-quiz {

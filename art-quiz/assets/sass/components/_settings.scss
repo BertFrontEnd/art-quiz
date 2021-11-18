@@ -14,6 +14,7 @@
     background-color: $settings-background-color;
     border-radius: 5px;
     box-shadow: $container-shadow;
+    animation: load-router $load-router-time $load-router-animate;
 
     .icon-settings-quiz {
       width: 70px;

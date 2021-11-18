@@ -18,12 +18,15 @@ html {
 }
 
 body {
-  overflow: hidden;
   font-family: 'Roboto', sans-serif;
   font-size: 1.6rem;
   background-color: #f4f4f4;
 }
 
+/* main {
+  overflow: hidden;
+}
+ */
 @-webkit-keyframes link-animate {
   0% {
     -webkit-transform: translateX(-50%) scale(0.5);
@@ -38,7 +41,6 @@ body {
             transform: translateX(-50%) scale(1);
   }
 }
-
 @keyframes link-animate {
   0% {
     -webkit-transform: translateX(-50%) scale(0.5);
@@ -51,6 +53,40 @@ body {
   100% {
     -webkit-transform: translateX(-50%) scale(1);
             transform: translateX(-50%) scale(1);
+  }
+}
+
+@-webkit-keyframes load-router {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes load-router {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -330,6 +366,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   row-gap: 20px;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-home-page .home-quiz img {
@@ -384,6 +422,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   row-gap: 10px;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-quiz-page .artist-quiz .artist-link-quiz,
@@ -492,6 +532,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
       flex-wrap: wrap;
   width: 200px;
   height: 200px;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-artist-page .artist-container-quiz .artist-link-quiz {
@@ -622,6 +664,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
       flex-wrap: wrap;
   width: 200px;
   height: 200px;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-picture-page .picture-container-quiz .picture-link-quiz {
@@ -757,6 +801,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.24);
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-settings-page .volume-quiz .icon-settings-quiz,
@@ -986,6 +1032,8 @@ input[type='range']:focus::-webkit-slider-runnable-track {
   color: #ffffff;
   text-transform: uppercase;
   background-color: #2196f3;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 .wrapper {

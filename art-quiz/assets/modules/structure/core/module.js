@@ -26,7 +26,7 @@ export class Module {
     this.renderRoute();
   }
 
-  renderRoute() {
+  async renderRoute() {
     let url = wfm.router();
     let route = this.routes.find((route) => route.path === url);
 
@@ -47,11 +47,11 @@ export class Module {
     offsetRange();
 
     if (route.path === 'artist') {
-      renderArtistCategories();
+      await renderArtistCategories();
     }
 
     if (route.path === 'picture') {
-      renderPictureCategories();
+      await renderPictureCategories();
     }
   }
 
