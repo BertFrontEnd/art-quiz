@@ -1,56 +1,50 @@
-class Categories {
-  categoriesContainer = document.querySelector(this.categoriesContainer);
-
-  constructor(config) {
-    this.categoriesContainer = config.categoriesContainer;
-    this.figureElement = config.figureElement;
+export class Categories {
+  constructor(container, config, increment) {
+    this.container = container;
     this.figureElementClass = config.figureElementClass;
-    this.aElement = config.aElement;
     this.aElementClass = config.aElementClass;
-    this.imgElement = config.imgElement;
     this.imgElementClass = config.imgElementClass;
-    this.figcaptionElement = figcaptionElement;
-    this.figcaptionElementClass = figcaptionElementClass;
-    this.spanCategoryElement = spanCategoryElement;
-    this.spanCategoryElementClass = spanCategoryElementClass;
-    this.spanScoreElement = spanScoreElement;
-    this.spanScoreElementClass = spanScoreElementClass;
+    this.figcaptionElementClass = config.figcaptionElementClass;
+    this.spanCategoryElementClass = config.spanCategoryElementClass;
+    this.spanScoreElementClass = config.spanScoreElementClass;
+    this.step = config.step;
     this.increment = increment;
   }
 
   renderCategory() {
-    const figureElement = document.createElement(this.figureElement);
-    figureElement.classList.add(figureElementClass);
+    const categoryNumber =
+      this.increment < 10 ? '0' + this.increment : this.increment;
 
-    const aElement = document.createElement(this.aElement);
+    const figureElement = document.createElement('figure');
+    figureElement.classList.add(this.figureElementClass);
+
+    const aElement = document.createElement('a');
     aElement.classList.add(this.aElementClass);
     aElement.setAttribute('href', '#');
 
-    const imgElement = document.createElement(this.imgElement);
+    const imgElement = document.createElement('img');
     imgElement.classList.add(this.imgElementClass);
     imgElement.src = `https://raw.githubusercontent.com/BertFrontEnd/art-quiz-images/master/art-quiz-images/img/${
-      i + 10
+      this.step + this.increment + 10
     }.jpg`;
-    imgElement.alt = `Image ${(i = i < 10 ? '0' + i : i)}`;
+    imgElement.alt = `Image ${this.increment}`;
 
-    const figcaptionElement = document.createElement(this.figcaptionElement);
+    const figcaptionElement = document.createElement('figcaption');
     figcaptionElement.classList.add(this.figcaptionElementClass);
 
-    const spanCategoryElement = document.createElement(
-      this.spanCategoryElement,
-    );
+    const spanCategoryElement = document.createElement('span');
     spanCategoryElement.classList.add(this.spanCategoryElementClass);
-    spanCategoryElement.textContent = `${i}`;
+    spanCategoryElement.textContent = categoryNumber;
 
-    const spanScoreElement = document.createElement(this.spanScoreElement);
+    const spanScoreElement = document.createElement('span');
     spanScoreElement.classList.add(this.spanScoreElementClass);
     spanScoreElement.textContent = `0/10`;
 
-    categoriesContainer.append(this.figureElement);
-    this.figureElement.append(this.aElement);
-    this.aElement.append(this.imgElement);
-    this.figureElement.append(this.figcaptionElement);
-    this.figcaptionElement.append(this.spanCategoryElement);
-    this.figcaptionElement.append(this.spanScoreElement);
+    this.container.append(figureElement);
+    figureElement.append(aElement);
+    aElement.append(imgElement);
+    figureElement.append(figcaptionElement);
+    figcaptionElement.append(spanCategoryElement);
+    figcaptionElement.append(spanScoreElement);
   }
 }
