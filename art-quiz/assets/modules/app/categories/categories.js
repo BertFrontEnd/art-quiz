@@ -16,13 +16,15 @@ export class Categories {
     const categoryNumber =
       this.increment < 10 ? '0' + this.increment : this.increment;
 
+    const quizCategory = `${this.directionDataset}-${categoryNumber}`;
+
     const figureElement = document.createElement('figure');
     figureElement.classList.add(this.figureElementClass);
-    figureElement.dataset.direction = `${this.directionDataset}-${categoryNumber}`;
+    figureElement.dataset.direction = quizCategory;
 
     const aElement = document.createElement('a');
     aElement.classList.add(this.aElementClass);
-    aElement.setAttribute('href', '#');
+    aElement.setAttribute('href', `#${quizCategory}`);
 
     const imgElement = document.createElement('img');
     imgElement.classList.add(this.imgElementClass);

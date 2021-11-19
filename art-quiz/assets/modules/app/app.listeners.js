@@ -4,18 +4,42 @@ const getHash = () => {
   window.addEventListener('load', () => {
     const hash = window.location.hash;
     if (hash === '') {
-      hash = 'home';
+      window.location.hash = 'home';
     }
   });
 };
 
+const bulkheadValues = (str, item) => {
+  for (let i = 1; i <= 12; i++) {
+    let k = i < 10 ? `0${i}` : i;
+
+    if (
+      item.classList.contains('quiz') &&
+      window.location.hash === `#${str}-${k}`
+    ) {
+      item.classList.add('active-link');
+    }
+  }
+};
+
 const saveActiveLink = () => {
   const links = document.querySelectorAll('.link');
+  const hash = window.location.hash;
 
   links.forEach((link) => {
-    if (link.classList.contains(window.location.hash.slice(1))) {
+    if (link.classList.contains(hash.slice(1))) {
       link.classList.add('active-link');
     }
+
+    if (
+      link.classList.contains('quiz') &&
+      (hash === '#artist' || hash === '#picture')
+    ) {
+      link.classList.add('active-link');
+    }
+
+    bulkheadValues('artist', link);
+    bulkheadValues('picture', link);
   });
 };
 
