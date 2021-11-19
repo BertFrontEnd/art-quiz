@@ -1,5 +1,9 @@
 import { wfm } from '../tools/utility.js';
-import { toggleDisableRange, offsetRange } from '../../app/app.listeners.js';
+import {
+  toggleDisableRange,
+  offsetRange,
+  playSound,
+} from '../../app/app.listeners.js';
 import { removeActiveLink } from './../tools/link.js';
 import { renderArtistCategories } from '../../app/categories/artist-categories.js';
 import { renderPictureCategories } from '../../app/categories/picture-categories.js';
@@ -45,6 +49,10 @@ export class Module {
     removeActiveLink(route);
     toggleDisableRange();
     offsetRange();
+
+    if (route.path === 'settings') {
+      playSound();
+    }
 
     if (route.path === 'artist') {
       await renderArtistCategories();

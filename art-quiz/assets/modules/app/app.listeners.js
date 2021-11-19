@@ -1,4 +1,5 @@
 import { wfm } from './../structure/tools/utility.js';
+import { playAudio } from './app.audio.js';
 
 const getHash = () => {
   window.addEventListener('load', () => {
@@ -75,4 +76,22 @@ const offsetRange = () => {
   });
 };
 
-export { getHash, saveActiveLink, toggleDisableRange, offsetRange };
+const playSound = () => {
+  const checkBox = document.querySelector('.checkbox-volume-quiz');
+  const rangeThumb = document.querySelector('.volume-range-quiz');
+
+  checkBox.addEventListener('input', () => {
+    if (checkBox.checked) {
+      playAudio.setPlay();
+    }
+    if (!checkBox.checked) {
+      playAudio.setPause();
+    }
+  });
+
+  rangeThumb.addEventListener('input', () => {
+    playAudio.setVolume(Number(rangeThumb.value));
+  });
+};
+
+export { getHash, saveActiveLink, toggleDisableRange, offsetRange, playSound };
