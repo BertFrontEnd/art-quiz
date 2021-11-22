@@ -1,6 +1,6 @@
-/* alert(
-  'If possible, postpone the check until Thursday, maybe after 17.00, please. Or let me know the deadline when you can check. Thank you very much!',
-); */
+alert(
+  'If possible, postpone the check until Thursday, maybe after 19.00, please. Or let me know the deadline when you can check. Thank you very much!',
+);
 
 import {
   getHash,
