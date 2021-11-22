@@ -18,11 +18,11 @@ export const settingsPageComponent = new SettingsPageComponent({
         <input type="range" min="0" max="100" value="50" class="range-setting-quiz volume-range-quiz" disabled="disabled" />
       </div>
     </div >
-    <div class="time-quiz">
-      <div class="icon-settings-quiz icon-time-quiz"></div>
+    <div class="timer-quiz">
+      <div class="icon-settings-quiz icon-timer-quiz"></div>
       <output class="timer-value-quiz">15</output>
       <div class="input-settings-quiz">
-        <input type="checkbox" id="timer" class="checkbox-quiz checkbox-time-quiz" />
+        <input type="checkbox" id="timer" class="checkbox-quiz checkbox-timer-quiz" />
         <input type="range" min="10" max="20" value="15" step="5" class="range-setting-quiz timer-range-quiz" disabled="disabled" />
         <label for="timer" class="label-quiz label-timer-quiz"></label>
       </div>

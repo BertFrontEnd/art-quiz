@@ -3,11 +3,13 @@ import {
   toggleDisableRange,
   offsetRange,
   playSound,
+  checkBoxValue,
 } from '../../app/app.listeners.js';
 import { removeActiveLink } from './../tools/link.js';
 import { renderArtistCategories } from '../../app/categories/artist-categories.js';
 import { renderPictureCategories } from '../../app/categories/picture-categories.js';
-
+import { getLocalStorage } from './../tools/local.js';
+/* import { playAudio } from '../../app/app.audio.js'; */
 export class Module {
   constructor(config) {
     this.components = config.components;
@@ -47,11 +49,20 @@ export class Module {
     this.renderComponent(route.component);
 
     removeActiveLink(route);
-    toggleDisableRange();
     offsetRange();
 
     if (route.path === 'settings') {
       playSound();
+      getLocalStorage('soundValue', '#volume');
+      getLocalStorage('timerValue', '#timer');
+      checkBoxValue();
+      toggleDisableRange();
+
+      /*      const checkBox = document.querySelector('.checkbox-volume-quiz');
+      if (checkBox.checked) {
+        console.log('play');
+        playAudio.setPlay();
+      } */
     }
 
     if (route.path === 'artist') {

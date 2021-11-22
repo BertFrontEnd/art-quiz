@@ -740,7 +740,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 }
 
 #app-settings-page .volume-quiz,
-#app-settings-page .time-quiz {
+#app-settings-page .timer-quiz {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,7 +770,7 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 }
 
 #app-settings-page .volume-quiz .icon-settings-quiz,
-#app-settings-page .time-quiz .icon-settings-quiz {
+#app-settings-page .timer-quiz .icon-settings-quiz {
   width: 70px;
   height: 70px;
   -webkit-mask-position: center;
@@ -783,13 +783,13 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 }
 
 #app-settings-page .volume-quiz .icon-volume-quiz,
-#app-settings-page .time-quiz .icon-volume-quiz {
+#app-settings-page .timer-quiz .icon-volume-quiz {
   -webkit-mask-image: url("./assets/img/volume.svg");
           mask-image: url("./assets/img/volume.svg");
 }
 
-#app-settings-page .volume-quiz .icon-time-quiz,
-#app-settings-page .time-quiz .icon-time-quiz {
+#app-settings-page .volume-quiz .icon-timer-quiz,
+#app-settings-page .timer-quiz .icon-timer-quiz {
   -webkit-mask-image: url("./assets/img/timer.svg");
           mask-image: url("./assets/img/timer.svg");
 }

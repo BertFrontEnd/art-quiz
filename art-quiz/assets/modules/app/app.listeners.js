@@ -1,5 +1,6 @@
 import { wfm } from './../structure/tools/utility.js';
 import { playAudio } from './app.audio.js';
+import { setLocalStorage } from './../structure/tools/local.js';
 
 const getHash = () => {
   window.addEventListener('load', () => {
@@ -94,4 +95,52 @@ const playSound = () => {
   });
 };
 
-export { getHash, saveActiveLink, toggleDisableRange, offsetRange, playSound };
+const playSoundOnLoad = () => {
+  const checkBox = document.querySelector('.checkbox-volume-quiz');
+  console.log(checkBox.checked);
+
+  /*   window.addEventListener('load', () => {
+    console.log('click');
+    if (checkBox.checked) {
+      playAudio.setPlay();
+    }
+  }); */
+
+  if (window.location.hash === '#settings' && checkBox.checked) {
+    playAudio.setPlay();
+  }
+};
+
+const checkBoxValue = () => {
+  const checkBoxes = document.querySelectorAll('.checkbox-quiz');
+
+  window.addEventListener('load', () => {
+    const hash = window.location.hash.slice(1);
+    if (hash === 'settings') {
+      console.log('play');
+      getLocalValue('soundValue', '#volume');
+      getLocalValue('timerValue', '#timer');
+    }
+  });
+
+  checkBoxes.forEach((checkbox) => {
+    checkbox.addEventListener('input', () => {
+      if (checkbox.classList.contains('checkbox-volume-quiz')) {
+        setLocalStorage('soundValue', '#volume');
+      }
+      if (checkbox.classList.contains('checkbox-timer-quiz')) {
+        setLocalStorage('timerValue', '#timer');
+      }
+    });
+  });
+};
+
+export {
+  getHash,
+  saveActiveLink,
+  toggleDisableRange,
+  offsetRange,
+  playSound,
+  playSoundOnLoad,
+  checkBoxValue,
+};

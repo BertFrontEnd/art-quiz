@@ -6,6 +6,7 @@ class PlayAudio {
     this.audio.src = './assets/sound/cat.mp3';
     this.audio.currentTime = 0;
     this.audio.loop = true;
+    /* this.audio.muted = false; */
     this.audio.load();
     this.audio.play();
   }
