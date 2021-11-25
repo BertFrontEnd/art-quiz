@@ -1,0 +1,25 @@
+#app-picture-01-page,
+#app-picture-02-page,
+#app-picture-03-page,
+#app-picture-04-page,
+#app-picture-05-page,
+#app-picture-06-page,
+#app-picture-07-page,
+#app-picture-08-page,
+#app-picture-09-page,
+#app-picture-10-page,
+#app-picture-11-page,
+#app-picture-12-page {
+  @include alignment(center, center, column, nowrap);
+  width: 100%;
+
+  .picture-category-quiz-game {
+    padding: 10px;
+    font-size: 2rem;
+    color: $error-text-color;
+    text-align: center;
+    word-break: break-word;
+    background-color: $error-background-color;
+    animation: load-router $load-router-time $load-router-animate;
+  }
+}

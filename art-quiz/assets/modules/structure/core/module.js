@@ -49,6 +49,7 @@ export class Module {
     this.renderComponent(route.component);
 
     removeActiveLink(route);
+    /* toggleDisableRange(); */
     offsetRange();
 
     if (route.path === 'settings') {

@@ -99,9 +99,9 @@ const playSoundOnLoad = () => {
   const checkBox = document.querySelector('.checkbox-volume-quiz');
   console.log(checkBox.checked);
 
-  /*   window.addEventListener('load', () => {
+  /* window.addEventListener('load', () => {
     console.log('click');
-    if (checkBox.checked) {
+    if (checkBox.checked && checkBox.checked) {
       playAudio.setPlay();
     }
   }); */

@@ -596,6 +596,58 @@ input[type='range']:focus::-webkit-slider-runnable-track {
   right: 5px;
 }
 
+#app-artist-01-page,
+#app-artist-02-page,
+#app-artist-03-page,
+#app-artist-04-page,
+#app-artist-05-page,
+#app-artist-06-page,
+#app-artist-07-page,
+#app-artist-08-page,
+#app-artist-09-page,
+#app-artist-10-page,
+#app-artist-11-page,
+#app-artist-12-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+#app-artist-01-page .artist-category-quiz-game,
+#app-artist-02-page .artist-category-quiz-game,
+#app-artist-03-page .artist-category-quiz-game,
+#app-artist-04-page .artist-category-quiz-game,
+#app-artist-05-page .artist-category-quiz-game,
+#app-artist-06-page .artist-category-quiz-game,
+#app-artist-07-page .artist-category-quiz-game,
+#app-artist-08-page .artist-category-quiz-game,
+#app-artist-09-page .artist-category-quiz-game,
+#app-artist-10-page .artist-category-quiz-game,
+#app-artist-11-page .artist-category-quiz-game,
+#app-artist-12-page .artist-category-quiz-game {
+  padding: 10px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  word-break: break-word;
+  background-color: #2196f3;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
+}
+
 #app-picture-page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -715,6 +767,58 @@ input[type='range']:focus::-webkit-slider-runnable-track {
 #app-picture-page .picture-container-quiz .picture-description-quiz .picture-score-quiz {
   bottom: 0;
   right: 5px;
+}
+
+#app-picture-01-page,
+#app-picture-02-page,
+#app-picture-03-page,
+#app-picture-04-page,
+#app-picture-05-page,
+#app-picture-06-page,
+#app-picture-07-page,
+#app-picture-08-page,
+#app-picture-09-page,
+#app-picture-10-page,
+#app-picture-11-page,
+#app-picture-12-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+}
+
+#app-picture-01-page .picture-category-quiz-game,
+#app-picture-02-page .picture-category-quiz-game,
+#app-picture-03-page .picture-category-quiz-game,
+#app-picture-04-page .picture-category-quiz-game,
+#app-picture-05-page .picture-category-quiz-game,
+#app-picture-06-page .picture-category-quiz-game,
+#app-picture-07-page .picture-category-quiz-game,
+#app-picture-08-page .picture-category-quiz-game,
+#app-picture-09-page .picture-category-quiz-game,
+#app-picture-10-page .picture-category-quiz-game,
+#app-picture-11-page .picture-category-quiz-game,
+#app-picture-12-page .picture-category-quiz-game {
+  padding: 10px;
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  word-break: break-word;
+  background-color: #2196f3;
+  -webkit-animation: load-router 0.6s ease;
+          animation: load-router 0.6s ease;
 }
 
 #app-settings-page {

@@ -1,0 +1,25 @@
+#app-artist-01-page,
+#app-artist-02-page,
+#app-artist-03-page,
+#app-artist-04-page,
+#app-artist-05-page,
+#app-artist-06-page,
+#app-artist-07-page,
+#app-artist-08-page,
+#app-artist-09-page,
+#app-artist-10-page,
+#app-artist-11-page,
+#app-artist-12-page {
+  @include alignment(center, center, column, nowrap);
+  width: 100%;
+
+  .artist-category-quiz-game {
+    padding: 10px;
+    font-size: 2rem;
+    color: $error-text-color;
+    text-align: center;
+    word-break: break-word;
+    background-color: $error-background-color;
+    animation: load-router $load-router-time $load-router-animate;
+  }
+}
