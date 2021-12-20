@@ -1,0 +1,63 @@
+.container {
+  @include alignment(center, center, column, nowrap);
+  row-gap: 20px;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: $loader-background-color;
+
+  .loader,
+  .loader:before,
+  .loader:after {
+    z-index: -5;
+    position: absolute;
+    border: 3px solid transparent;
+    border-top: 3px solid $loader-background-color;
+    border-radius: 50%;
+    animation: rotate linear infinite;
+    content: '';
+    opacity: 0.8;
+  }
+
+  .loader {
+    position: relative;
+  }
+
+  .loader {
+    height: 100px;
+    width: 100px;
+    /* margin-bottom: 200px; */
+    animation-duration: 1.05s;
+
+    &:before {
+      height: 75px;
+      width: 75px;
+      top: 10px;
+      left: 10px;
+      animation-duration: 10s;
+    }
+
+    &::after {
+      height: 50px;
+      width: 50px;
+      top: 22px;
+      left: 22px;
+      animation-duration: 4s;
+    }
+  }
+
+  .message {
+    z-index: 5;
+    font-size: 1.8rem;
+    color: $loader-text-color;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
+}

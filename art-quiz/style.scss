@@ -1,0 +1,25 @@
+// Abstract
+@import './assets/sass/abstract/constants';
+@import './assets/sass/abstract/placeholders';
+@import './assets/sass/abstract/mixins';
+
+// Base
+@import './assets/sass/base/base';
+@import './assets/sass/base/keyframes';
+@import './assets/sass/base/loader';
+@import './assets/sass/base/range';
+
+//Components
+@import './assets/sass/components/header';
+@import './assets/sass/components/home';
+@import './assets/sass/components/quiz';
+@import './assets/sass/components/artist';
+@import './assets/sass/components/artist-quiz';
+@import './assets/sass/components/picture';
+@import './assets/sass/components/picture-quiz';
+@import './assets/sass/components/settings';
+@import './assets/sass/components/footer';
+@import './assets/sass/components/error';
+
+// Layout
+@import './assets/sass/layout/wrapper';

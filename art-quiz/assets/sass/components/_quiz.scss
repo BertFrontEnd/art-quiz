@@ -1,0 +1,52 @@
+#app-quiz-page {
+  @include alignment(center, center, row, wrap);
+  row-gap: 20px;
+  column-gap: 40px;
+  width: 100%;
+
+  .artist-quiz,
+  .picture-quiz {
+    @include alignment(center, center, column, nowrap);
+    row-gap: 10px;
+    animation: load-router $load-router-time $load-router-animate;
+
+    .artist-link-quiz,
+    .picture-link-quiz {
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: $container-shadow;
+      background-color: $container-background-color;
+      @extend %transition;
+
+      &:hover {
+        .category-image-quiz {
+          transform: scale(1);
+        }
+      }
+
+      .category-image-quiz {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transform: scale(1.2);
+        @extend %transition;
+      }
+    }
+
+    .direction-quiz {
+      font-size: 3rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: $main-text-color;
+      font-weight: 600;
+
+      .text-quiz {
+        font-family: 'Forum', serif;
+        font-weight: 900;
+      }
+    }
+  }
+}

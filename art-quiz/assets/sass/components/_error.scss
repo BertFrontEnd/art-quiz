@@ -1,0 +1,13 @@
+#app-error-page {
+  @include alignment(center, center, column, nowrap);
+  width: 100%;
+
+  .error-quiz {
+    padding: 10px;
+    font-size: 2.5rem;
+    color: $error-text-color;
+    text-transform: uppercase;
+    background-color: $error-background-color;
+    animation: load-router $load-router-time $load-router-animate;
+  }
+}

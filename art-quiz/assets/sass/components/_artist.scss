@@ -1,0 +1,77 @@
+#app-artist-page {
+  @include alignment(center, center, row, wrap);
+  row-gap: 20px;
+  column-gap: 20px;
+  width: 100%;
+  max-width: 860px;
+  margin: 50px auto;
+
+  .artist-container-quiz {
+    position: relative;
+    @include alignment(center, center, row, wrap);
+    width: 200px;
+    height: 200px;
+    animation: load-router $load-router-time $load-router-animate;
+
+    .artist-link-quiz {
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: $container-shadow;
+      background-color: $container-background-color;
+      @extend %transition;
+
+      &:hover {
+        .artist-image-quiz {
+          transform: scale(1);
+        }
+
+        ~ .artist-description-quiz {
+          .artist-category-quiz {
+            transform: translate(15px, 15px) scale(1.2);
+          }
+
+          .artist-score-quiz {
+            transform: translate(-15px, -15px) scale(1.2);
+          }
+        }
+      }
+
+      .artist-image-quiz {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        transform: scale(1.2);
+        @extend %transition;
+      }
+    }
+
+    .artist-description-quiz {
+      @include alignment(space-between, center, column, nowrap);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      font-size: 2rem;
+      color: $category-text-color;
+      pointer-events: none;
+
+      .artist-category-quiz,
+      .artist-score-quiz {
+        position: absolute;
+        @extend %transition;
+      }
+
+      .artist-category-quiz {
+        top: 0;
+        left: 5px;
+      }
+
+      .artist-score-quiz {
+        bottom: 0;
+        right: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.footer {
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.24);
+
+  nav {
+    ul {
+      @include alignment(center, center, row, nowrap);
+      width: 100%;
+      height: 64px;
+      background-color: $link-background-color;
+
+      li {
+        @include alignment(flex-end, center, column, nowrap);
+        height: 100%;
+        min-width: 100px;
+        width: 120px;
+
+        a {
+          position: relative;
+          @include alignment(flex-end, center, column, nowrap);
+          width: 100%;
+          height: 100%;
+          padding: 5px;
+          font-size: 1.4rem;
+          color: $inactive-link-text-color;
+          text-decoration: none;
+          @extend %transition;
+
+          &:hover {
+            background-color: $hover-link-background-color;
+            color: $hover-link-text-color;
+
+            &::before {
+              animation: link-animate 0.6s;
+            }
+          }
+
+          &::before {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            font-family: 'fontAwesome';
+            font-size: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            transform: translateX(-50%);
+          }
+        }
+
+        .author {
+          &::before {
+            content: '\f09b';
+          }
+        }
+
+        .year {
+          &::before {
+            content: '\f085';
+          }
+        }
+
+        .rsschool {
+          &::before {
+            content: '\f19d';
+          }
+        }
+      }
+    }
+  }
+}

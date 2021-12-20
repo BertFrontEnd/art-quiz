@@ -1,0 +1,90 @@
+#app-settings-page {
+  @include alignment(center, center, row, wrap);
+  row-gap: 20px;
+  column-gap: 40px;
+  width: 100%;
+
+  .volume-quiz,
+  .timer-quiz {
+    @include alignment(center, center, row, wrap);
+    column-gap: 30px;
+    width: 250px;
+    height: 250px;
+    padding: 35px;
+    background-color: $settings-background-color;
+    border-radius: 5px;
+    box-shadow: $container-shadow;
+    animation: load-router $load-router-time $load-router-animate;
+
+    .icon-settings-quiz {
+      width: 70px;
+      height: 70px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: contain;
+      background-color: $settings-icon-background-color;
+    }
+
+    .icon-volume-quiz {
+      mask-image: url('./assets/img/volume.svg');
+    }
+
+    .icon-timer-quiz {
+      mask-image: url('./assets/img/timer.svg');
+    }
+  }
+
+  .volume-value-quiz,
+  .timer-value-quiz {
+    width: 60px;
+    font-size: 3rem;
+    text-align: center;
+    color: $settings-text-color;
+    user-select: none;
+  }
+
+  .input-settings-quiz {
+    @include alignment(center, center, row, wrap);
+    column-gap: 20px;
+
+    .checkbox-quiz {
+      display: none;
+      appearance: none;
+
+      &:checked {
+        ~ .label-quiz {
+          &:before {
+            background-color: $settings-check-background-color;
+          }
+        }
+
+        ~ .range-setting-quiz::-webkit-slider-thumb {
+          background-color: $settings-thumb-background-color;
+        }
+      }
+    }
+
+    .label-volume-quiz,
+    .label-timer-quiz {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      background: $settings-checkbox-background-color;
+      cursor: pointer;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 70%;
+        height: 70%;
+        content: '';
+        border-radius: 1px;
+        transform: translate(-50%, -50%);
+        @extend %transition;
+      }
+    }
+  }
+}

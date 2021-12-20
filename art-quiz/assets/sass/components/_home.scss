@@ -1,0 +1,21 @@
+#app-home-page {
+  @include alignment(center, center, column, nowrap);
+
+  .home-quiz {
+    @include alignment(center, center, column, nowrap);
+    row-gap: 20px;
+    animation: load-router $load-router-time $load-router-animate;
+
+    img {
+      width: 300px;
+      height: 350px;
+    }
+
+    .description-quiz {
+      max-width: 250px;
+      text-align: center;
+      color: $main-text-color;
+      font-weight: 300;
+    }
+  }
+}
